@@ -4,7 +4,23 @@
   <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body style="background:white">
-  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-<dotlottie-player src="/folder/folder/logo_animation.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></dotlottie-player>
+
+  <textarea class="text-area" name="editor_area" id="editor_area"></textarea>
+ 
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=2su3f7qaxjocjb7ws6gadvjcm7qib3uqmzbw3m4nhe2pi51u"></script>
+<script>
+    tinymce.init({
+        selector: '#editor_area',
+        height: 300,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link media mediaembed charmap print preview anchor textcolor',
+            'searchreplace visualblocks table fullscreen',
+            'image table paste code codesample',
+        ],
+        toolbar: "insert | undo redo |  formatselect | bold italic underline forecolor removeformat | alignleft aligncenter alignright alignjustify | bullist numlist | outdent indent | table blockquote codesample code",
+    });
+</script>
+
   </body>
 </html>
